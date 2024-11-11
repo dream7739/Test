@@ -20,7 +20,7 @@ final class NasaViewController: UIViewController {
         configureHierarchy()
         configureLayout()
         configureUI()
-        fetchMultipleImage()
+//        fetchMultipleImage()
 //        fetchImageByGCD()
 //        fetchImageByConcurrency()
     }

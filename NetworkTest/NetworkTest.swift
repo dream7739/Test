@@ -20,7 +20,7 @@ final class NetworkTest: XCTestCase {
         sut = nil
     }
     
-    func testAPIManager_Validation_GCD_ReturnSuccess() async throws {
+    func testAPIManager_Validation_GCD_ReturnSuccess() throws {
         let expectation = XCTestExpectation(description: "mock network completion")
         sut.callNetworkByGCD(NasaViewController.Nasa.photo) { image, error in
             XCTAssertNotNil(image)
