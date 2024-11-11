@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
+import Toast
 
 final class ContinuationViewController: UIViewController {
     private let imageView = UIImageView()
@@ -19,6 +21,7 @@ final class ContinuationViewController: UIViewController {
         run()
         runThrow()
         runResult()
+        configureImage()
     }
     
     private func configureHierarchy() {
@@ -29,6 +32,18 @@ final class ContinuationViewController: UIViewController {
         imageView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(300)
+        }
+    }
+    
+    private func configureImage() {
+        Task {
+            let result = await fetchImage()
+            switch result {
+            case .success(let value):
+                imageView.image = value
+            case .failure(let error):
+                view.makeToast("오류가 발생하였습니다")
+            }
         }
     }
     
@@ -103,3 +118,29 @@ extension ContinuationViewController {
     
 }
 
+extension ContinuationViewController {
+    enum ImageFetchError: Error {
+        case invalidURL
+        case noImage
+    }
+    
+    func fetchImage() async -> Result<UIImage, ImageFetchError> {
+        return await withCheckedContinuation { continuation in
+            
+            guard let url = URL(string: "https://picsum.photos/200/300") else {
+                return continuation.resume(returning: .failure(.invalidURL))
+            }
+            
+            KingfisherManager.shared.retrieveImage(with: url) { result in
+                switch result {
+                case .success(let value):
+                    let image = value.image
+                    return continuation.resume(returning: .success(image))
+                case .failure(let error):
+                    return continuation.resume(returning: .failure(.noImage))
+                }
+            }
+            
+        }
+    }
+}

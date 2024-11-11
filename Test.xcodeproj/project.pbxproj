@@ -19,6 +19,7 @@
 		88727C0A2CDCB2AB00EFF8DF /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 88727C092CDCB2AB00EFF8DF /* Toast */; };
 		88D743C22CE1D2A400EB99FC /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D743C12CE1D2A400EB99FC /* NetworkTest.swift */; };
 		88D743CB2CE1EA6F00EB99FC /* ContinuationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D743CA2CE1EA6F00EB99FC /* ContinuationViewController.swift */; };
+		88D743CF2CE1FC2C00EB99FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88D743CE2CE1FC2C00EB99FC /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D743CF2CE1FC2C00EB99FC /* Kingfisher in Frameworks */,
 				88727C0A2CDCB2AB00EFF8DF /* Toast in Frameworks */,
 				88727C032CDCA9B200EFF8DF /* SnapKit in Frameworks */,
 			);
@@ -145,6 +147,7 @@
 			packageProductDependencies = (
 				88727C022CDCA9B200EFF8DF /* SnapKit */,
 				88727C092CDCB2AB00EFF8DF /* Toast */,
+				88D743CE2CE1FC2C00EB99FC /* Kingfisher */,
 			);
 			productName = Test;
 			productReference = 88727BE82CDCA57700EFF8DF /* Test.app */;
@@ -199,6 +202,7 @@
 			packageReferences = (
 				88727C012CDCA9B200EFF8DF /* XCRemoteSwiftPackageReference "SnapKit" */,
 				88727C082CDCB2AB00EFF8DF /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				88D743CD2CE1FC2C00EB99FC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 88727BE92CDCA57700EFF8DF /* Products */;
 			projectDirPath = "";
@@ -538,6 +542,14 @@
 				minimumVersion = 5.1.1;
 			};
 		};
+		88D743CD2CE1FC2C00EB99FC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -550,6 +562,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 88727C082CDCB2AB00EFF8DF /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		88D743CE2CE1FC2C00EB99FC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88D743CD2CE1FC2C00EB99FC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
