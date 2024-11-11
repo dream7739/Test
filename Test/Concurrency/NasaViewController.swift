@@ -94,7 +94,6 @@ extension NasaViewController {
             }
         }
         print("44444", Thread.isMainThread)
-
     }
     
     private func fetchMultipleImage() {
