@@ -7,6 +7,15 @@
 
 import Foundation
 
+@propertyWrapper
+class Dependency<T> {
+    let wrappedValue: T
+    
+    init() {
+        self.wrappedValue = DependencyContainer.resolve()
+    }
+}
+
 final class DependencyContainer {
     private static var shared = DependencyContainer()
     private init() { }

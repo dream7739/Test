@@ -8,6 +8,7 @@
 import UIKit
 
 final class DependencyViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dependencyTest()
@@ -25,10 +26,14 @@ final class DependencyViewController: UIViewController {
         
         let lunch: Lunch = DependencyContainer.resolve()
         let dinner: Dinner = DependencyContainer.resolve()
-        DependencyContainer.register(Resturant(lunch: lunch, dinner: dinner))
+        DependencyContainer.register(Restaurant(lunch: lunch, dinner: dinner))
         
-        let restaurant100: Resturant = DependencyContainer.resolve()
+        let restaurant100: Restaurant = DependencyContainer.resolve()
         restaurant100.showMenu()
+        
+        //Property Wrapper
+        @Dependency var restaurant: Restaurant
+        restaurant.showMenu()
     }
 }
 
@@ -48,7 +53,7 @@ protocol Menu: AnyObject {
     var name: String { get }
 }
 
-class Resturant {
+class Restaurant {
     let lunch: Menu //타입으로서의 프로토콜
     let dinner: Menu
     
