@@ -8,31 +8,15 @@
 import UIKit
 
 final class DependencyViewController: UIViewController {
-    
+    //Property Wrapper
+    @Dependency var restaurant: Restaurant
+
     override func viewDidLoad() {
         super.viewDidLoad()
         dependencyTest()
     }
      
     private func dependencyTest() {
-//        let lunch = Lunch(name: "햄버거")
-//        let dinner = Dinner(name: "치킨")
-//        let restaurant = Resturant(lunch: lunch, dinner: dinner)
-        
-        // 햄버거와 치킨을 파는 레스토랑 100호점
-        // 인스턴스 생성이 계속해서 일어나고 코드 중복이 생길 수 있음
-        DependencyContainer.register(Lunch(name: "햄버거"))
-        DependencyContainer.register(Dinner(name: "치킨"))
-        
-        let lunch: Lunch = DependencyContainer.resolve()
-        let dinner: Dinner = DependencyContainer.resolve()
-        DependencyContainer.register(Restaurant(lunch: lunch, dinner: dinner))
-        
-        let restaurant100: Restaurant = DependencyContainer.resolve()
-        restaurant100.showMenu()
-        
-        //Property Wrapper
-        @Dependency var restaurant: Restaurant
         restaurant.showMenu()
     }
 }
