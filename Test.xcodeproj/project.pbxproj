@@ -22,6 +22,7 @@
 		88D743C22CE1D2A400EB99FC /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D743C12CE1D2A400EB99FC /* NetworkTest.swift */; };
 		88D743CB2CE1EA6F00EB99FC /* ContinuationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D743CA2CE1EA6F00EB99FC /* ContinuationViewController.swift */; };
 		88D743CF2CE1FC2C00EB99FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88D743CE2CE1FC2C00EB99FC /* Kingfisher */; };
+		88EA883B2CE3991300AA5DF9 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA883A2CE3991300AA5DF9 /* PropertyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		88D743BF2CE1D2A400EB99FC /* NetworkTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D743C12CE1D2A400EB99FC /* NetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		88D743CA2CE1EA6F00EB99FC /* ContinuationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationViewController.swift; sourceTree = "<group>"; };
+		88EA883A2CE3991300AA5DF9 /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				88C0161F2CE2F76E00C5E72B /* DependencyViewController.swift */,
 				88C016212CE30C2C00C5E72B /* DependencyContainer.swift */,
+				88EA883A2CE3991300AA5DF9 /* PropertyViewController.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				88727BEE2CDCA57700EFF8DF /* SceneDelegate.swift in Sources */,
 				88727C072CDCB10F00EFF8DF /* URLSession+.swift in Sources */,
 				88C016222CE30C2C00C5E72B /* DependencyContainer.swift in Sources */,
+				88EA883B2CE3991300AA5DF9 /* PropertyViewController.swift in Sources */,
 				88C016202CE2F76E00C5E72B /* DependencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
