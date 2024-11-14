@@ -25,23 +25,24 @@ final class AppCoordinator: Coordinator {
         }
     }
     
-    private func showMainViewController() {
+    func showMainViewController() {
         let mainCoordinator = MainCoordinator(navigationController: navigationController)
         childCoordinators.append(mainCoordinator)
+        mainCoordinator.parentCoordinator = self
         mainCoordinator.start()
     }
     
-    private func showLoginViewController() {
+    func showLoginViewController() {
         let loginCoordinator = LoginCoordinator(navigationController: navigationController)
-        loginCoordinator.delegate = self
         childCoordinators.append(loginCoordinator)
+        loginCoordinator.parentCoordinator = self
         loginCoordinator.start()
     }
-}
-
-extension AppCoordinator: LoginCoordinatorProtocol {
-    func didLoggedIn(_ coordinator: LoginCoordinator) {
-        childCoordinators = childCoordinators.filter { $0 !== coordinator }
-        showMainViewController()
+    
+    func childDidFinish(_ child: Coordinator) {
+        if let index = childCoordinators.firstIndex(where: { $0 === child }) {
+            childCoordinators.remove(at: index)
+            print("안뇽")
+        }
     }
 }

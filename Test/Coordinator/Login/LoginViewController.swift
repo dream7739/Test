@@ -8,13 +8,9 @@
 import UIKit
 import SnapKit
 
-protocol LoginViewControllerDelegate: AnyObject {
-    func login()
-}
-
 final class LoginViewController: UIViewController {
     private let loginButton = UIButton()
-    var delegate: LoginViewControllerDelegate?
+    var coordinator: LoginCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +33,6 @@ final class LoginViewController: UIViewController {
 extension LoginViewController {
     @objc
     private func loginButtonClicked() {
-        delegate?.login()
+        coordinator?.login()
     }
 }

@@ -7,14 +7,10 @@
 
 import UIKit
 
-protocol LoginCoordinatorProtocol: AnyObject {
-    func didLoggedIn(_ coordinator: LoginCoordinator)
-}
-
 final class LoginCoordinator: Coordinator {
+    var parentCoordinator: AppCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    var delegate: LoginCoordinatorProtocol?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -22,14 +18,12 @@ final class LoginCoordinator: Coordinator {
     
     func start() {
         let loginViewController = LoginViewController()
-        loginViewController.delegate = self
+        loginViewController.coordinator = self
         navigationController.viewControllers = [loginViewController]
     }
-}
-
-extension LoginCoordinator: LoginViewControllerDelegate {
+    
     func login() {
-        delegate?.didLoggedIn(self)
+        parentCoordinator?.showMainViewController()
+        parentCoordinator?.childDidFinish(self)
     }
 }
-
