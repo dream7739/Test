@@ -42,7 +42,6 @@ final class AppCoordinator: Coordinator {
     func childDidFinish(_ child: Coordinator) {
         if let index = childCoordinators.firstIndex(where: { $0 === child }) {
             childCoordinators.remove(at: index)
-            print("안뇽")
         }
     }
 }

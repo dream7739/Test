@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		884CE2FE2CEA29BF0074DF49 /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884CE2FD2CEA29BF0074DF49 /* KeychainViewController.swift */; };
+		884CE3002CEA2B6C0074DF49 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884CE2FF2CEA2B6C0074DF49 /* UserDefaultsManager.swift */; };
 		88727BEC2CDCA57700EFF8DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88727BEB2CDCA57700EFF8DF /* AppDelegate.swift */; };
 		88727BEE2CDCA57700EFF8DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88727BED2CDCA57700EFF8DF /* SceneDelegate.swift */; };
 		88727BF02CDCA57700EFF8DF /* NasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88727BEF2CDCA57700EFF8DF /* NasaViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		884CE2FD2CEA29BF0074DF49 /* KeychainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainViewController.swift; sourceTree = "<group>"; };
+		884CE2FF2CEA2B6C0074DF49 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		88727BE82CDCA57700EFF8DF /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88727BEB2CDCA57700EFF8DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88727BED2CDCA57700EFF8DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		884CE2FC2CEA29B40074DF49 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				884CE2FD2CEA29BF0074DF49 /* KeychainViewController.swift */,
+				884CE2FF2CEA2B6C0074DF49 /* UserDefaultsManager.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		88727BDF2CDCA57700EFF8DF = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 		88727BEA2CDCA57700EFF8DF /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				884CE2FC2CEA29B40074DF49 /* Keychain */,
 				888FF1A52CE5CD2C00801682 /* Coordinator */,
 				88D743D12CE255F100EB99FC /* Applictation */,
 				88D743D02CE255E700EB99FC /* Dependency */,
@@ -308,6 +322,8 @@
 			files = (
 				888FF1AB2CE5CF2F00801682 /* AppCoordinator.swift in Sources */,
 				88727C052CDCADC300EFF8DF /* APIManager.swift in Sources */,
+				884CE3002CEA2B6C0074DF49 /* UserDefaultsManager.swift in Sources */,
+				884CE2FE2CEA29BF0074DF49 /* KeychainViewController.swift in Sources */,
 				888FF1A92CE5CD3A00801682 /* MainViewController.swift in Sources */,
 				88727BF02CDCA57700EFF8DF /* NasaViewController.swift in Sources */,
 				88D743CB2CE1EA6F00EB99FC /* ContinuationViewController.swift in Sources */,
